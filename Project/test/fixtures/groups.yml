@@ -5,11 +5,11 @@ one:
   description: MyText
   numberNeeded: 1
   numberTotal: 1
-  category: 
+  category: MyString
 
 two:
   groupName: MyString
   description: MyText
   numberNeeded: 1
   numberTotal: 1
-  category: 
+  category: MyString

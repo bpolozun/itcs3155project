@@ -5,7 +5,7 @@ class CreateGroups < ActiveRecord::Migration[5.0]
       t.text :description
       t.integer :numberNeeded
       t.integer :numberTotal
-      t.String :category
+      t.string :category
 
       t.timestamps
     end
