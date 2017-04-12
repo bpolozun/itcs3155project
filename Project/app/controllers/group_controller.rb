@@ -6,18 +6,18 @@ class GroupController < ApplicationController
     
     def create
         #render plain: params[:group].inspect
-        @group = group.new(params[:group])
+        @group = Group.new(params[:group])
         
         @group.save
         redirect_to @group
     end
     
     def index
-       @group = group.all 
+       @group = Group.all 
     end
     
     def edit
-       @group = group.find(params[:id]) 
+       @group = Group.find(params[:id]) 
     end
     
     private
