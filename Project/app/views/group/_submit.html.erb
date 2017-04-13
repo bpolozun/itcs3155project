@@ -1,4 +1,4 @@
-<%= form_for @group do |f| %>
+<%= form_for :group do |f| %>
  
   <% if @group.errors.any? %>
     <div id="error_explanation">
@@ -28,13 +28,13 @@
   </p>
     
    <p>
-    <%= f.label :Category %><br>
-    <%= f.text_field :Category %>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
   </p>
  
   <p>
     <%= f.label :description %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :description %>
   </p>
  
   <p>

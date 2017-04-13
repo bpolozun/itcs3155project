@@ -2,19 +2,23 @@
 <%= link_to 'Register a Group Ad', new_group_path %>
 <table>
     <tr>
-        <th>Title</th>
-        <th>Text</th>
+        <th>Group Name</th>
+        <th>Number Needed</th>
+        <th>Total Group Size</th>
+        <th>Category</th>
     </tr>
     
     <% @group.each do |group| %>
         <tr>
-            <td><%= group.title %></td>
-            <td><%= group.text %></td>
+            <td><%= group.groupName %></td>
+            <td><%= group.numberNeeded %></td>
+            <td><%= group.numberTotal %></td>
+            <td><%= group.category %></td>
+            
             <td><%= link_to 'Show', group_path(group) %></td>
             <td><%= link_to 'Edit', edit_group_path(group) %></td>
-            <td><%= link_to 'Destroy', group_path(group), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+            #<td><%= link_to 'Destroy', group_path(group), method: :delete, data: {confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
     
-    <%= link_to 'Back', group_path %>
 </table>

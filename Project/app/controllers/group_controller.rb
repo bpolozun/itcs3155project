@@ -1,15 +1,21 @@
 class GroupController < ApplicationController
     
     def new
-        
+        @group = Group.new
     end
     
     def create
-        #render plain: params[:group].inspect
-        @group = Group.new(params[:group])
+        @group = Group.new(group_parameters)
         
-        @group.save
-        redirect_to @group
+        if @group.save
+            redirect_to @group
+        else 
+            render 'new'
+        end
+    end
+    
+    def show
+        @group = Group.find(params[:id])
     end
     
     def index
@@ -22,6 +28,6 @@ class GroupController < ApplicationController
     
     private
     def group_parameters
-        params.require(:group).permit(:groupName, :desription, :numberNeeded, :numberTotal)
+        params.require(:group).permit(:groupName, :desription, :numberNeeded, :numberTotal, :category)
     end
 end
