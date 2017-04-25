@@ -42,6 +42,8 @@ class GroupsController < ApplicationController
         redirect_to groups_path
     end
     
+    CATEGORIES = ['Sports', 'Extreme Sports', 'Online', 'Music', 'Study', 'Other']
+    
     private
     def group_parameters
         params.require(:group).permit(:groupName, :desription, :numberNeeded, :numberTotal, :category)

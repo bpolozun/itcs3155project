@@ -192,6 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  capybara
   coffee-rails (~> 4.2)
   cucumber
   cucumber-rails
