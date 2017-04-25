@@ -27,7 +27,8 @@
         <td>0</td>
     </tr>
         <td><%= link_to 'All', controller: 'groups' %></td>
-        <td>0</td>
+        <td> <%= Group.distinct.count('id') %>
+        </td>
     </tr>
 </table>
 
