@@ -8,22 +8,23 @@
     </tr>
     
     <tr>
-        <td>Sports</td>
-        <td>0</td>
+        <td><%= link_to 'Sports', controller: 'groups', action: 'sports' %></td>
+        <td> <%= Group.distinct.count('id') %>
     </tr>
-        <td>Extreme Sports</td>
-        <td>0</td>
-    </tr>
-        <tr>
-        <td>Music</td>
+    <tr>
+        <td><%= link_to 'Extreme Sports', controller: 'groups', action: 'exsports' %></td>
         <td>0</td>
     </tr>
         <tr>
-        <td>Onlines</td>
+        <td><%= link_to 'Music', controller: 'groups', action: 'music' %></td>
         <td>0</td>
     </tr>
         <tr>
-        <td>Study</td>
+        <td><%= link_to 'Online Gaming', controller: 'groups', action: 'online' %></td>
+        <td>0</td>
+    </tr>
+        <tr>
+        <td><%= link_to 'Academics', controller: 'groups', action: 'academic' %></td>
         <td>0</td>
     </tr>
         <td><%= link_to 'All', controller: 'groups' %></td>
@@ -32,4 +33,4 @@
     </tr>
 </table>
 
-<h3 align=center>Main | Search | About</h3>
+<h3 align=center>Main | About</h3> 

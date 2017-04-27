@@ -3,7 +3,7 @@ class CreateApplicants < ActiveRecord::Migration[5.0]
     create_table :applicants do |t|
       t.string :name
       t.string :contact
-      t.references :groups, foreign_key: true
+      t.references :group, foreign_key: true
 
       t.timestamps
     end

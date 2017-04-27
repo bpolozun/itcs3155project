@@ -21,3 +21,7 @@ end
 Then(/^I should click on the "([^"]*)" button$/) do |button_name|
   click_button button_name
 end
+
+Then(/^I should select the "([^"]*)" field$/) do |field_name|
+  select('Sports', from: 'Category')
+end

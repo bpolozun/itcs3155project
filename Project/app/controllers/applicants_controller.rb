@@ -1,7 +1,14 @@
 class ApplicantsController < ApplicationController
     def create
         @group = Group.find(params[:group_id])
-        @applicant = @group.applicant.create(applicant_params)
+        @applicant = @group.applicants.create(applicant_params)
+        redirect_to group_path(@group)
+    end
+    
+    def destroy
+        @group = Group.find(params[:group_id])
+        @applicant = @group.applicants.find(params[:id])
+        @applicant.destroy
         redirect_to group_path(@group)
     end
     

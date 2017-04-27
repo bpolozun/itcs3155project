@@ -1,5 +1,20 @@
 class GroupsController < ApplicationController
     
+    def sports
+         @groups = Group.all 
+    end
+    def exsports
+         @groups = Group.all 
+    end
+    def music
+         @groups = Group.all 
+    end
+    def academic
+         @groups = Group.all 
+    end
+    def online
+         @groups = Group.all 
+    end
     def new
         @group = Group.new
     end

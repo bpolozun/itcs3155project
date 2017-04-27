@@ -26,6 +26,13 @@ Scenario: As a poster I want to be able to create a post
   Then I should fill in "Groupname" field
   Then I should fill in "Numberneeded" field
   Then I should fill in "Numbertotal" field
-  Then I should fill in "Category" field
+  Then I should select the "Category" field
   Then I should fill in "Description" field
   Then I should click on the "Create Group" button
+  
+Scenario: As a poster I want to be able to edit a post
+  Given I am on the home page
+  When I click on the "All" link
+  Then I should be on the "Listing Groups: All" page
+  Then I should click on the "Update" button
+  Then I should click on the "Update Group" button

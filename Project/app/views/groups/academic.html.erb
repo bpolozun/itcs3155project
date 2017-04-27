@@ -1,4 +1,4 @@
-<h1>Listing Groups: All</h1>
+<h1>Listing Groups: Sports</h1>
 <%= link_to 'Register a Group Ad', new_group_path %>
 <table>
     <tr>
@@ -9,7 +9,7 @@
     </tr>
     
     <% @groups.each do |group| %>
-        
+        <% if group.category == "Academics" %>
         <tr>
             <td><%= group.groupName %></td>
             <td><%= group.numberNeeded %></td>
@@ -20,6 +20,7 @@
             <td><%= link_to 'Update', edit_group_path(group) %></td>
             #<td><%= link_to 'Delete', group_path(group), method: :delete, data: {confirm: 'Are you sure?' } %></td>
         </tr>
+        <% end %>
     <% end %>
     
 </table>

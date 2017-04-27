@@ -3,9 +3,9 @@
 one:
   name: MyString
   contact: MyString
-  groups: one
+  group: one
 
 two:
   name: MyString
   contact: MyString
-  groups: two
+  group: two
