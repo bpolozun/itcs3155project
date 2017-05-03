@@ -1,11 +1,10 @@
-<h1>Listing Groups: Academics</h1>
+<h1 align = center>Listing Groups: Academics</h1>
 <%= link_to 'Register a Group Ad', new_group_path %>
-<table>
+<table align = center>
     <tr>
         <th>Group Name</th>
         <th>Number Needed</th>
         <th>Total Group Size</th>
-        <th>Category</th>
     </tr>
     
     <% @groups.each do |group| %>
@@ -14,7 +13,6 @@
             <td><%= group.groupName %></td>
             <td><%= group.numberNeeded %></td>
             <td><%= group.numberTotal %></td>
-            <td><%= group.category %></td>
             
             <td><%= link_to 'View', group_path(group) %></td>
             <td><%= link_to 'Update', edit_group_path(group) %></td>

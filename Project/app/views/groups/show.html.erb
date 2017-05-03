@@ -23,11 +23,11 @@
     <%= @group.category %>
 </p>
 
-<h3>Applicants</h3>
-    <%=render @group.applicants %>
-    
-    <h3>
+<h4>
         Apply to this group:
-    </h3>
+    </h4>
     <%= render 'applicants/form' %>
+
+<h4>Applicants</h4>
+    <%=render @group.applicants %>
 <%= link_to 'Main Page',  controller: 'main', action: 'index' %>
