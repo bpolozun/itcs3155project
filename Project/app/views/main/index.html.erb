@@ -9,23 +9,23 @@
     
     <tr>
         <td><%= link_to 'Sports', controller: 'groups', action: 'sports' %></td>
-        <td> <%= Group.distinct.count('id') %>
+        <td> <%= Group.where(category: 'Sports').count %>
     </tr>
     <tr>
         <td><%= link_to 'Extreme Sports', controller: 'groups', action: 'exsports' %></td>
-        <td>0</td>
+        <td><%= Group.where(category: 'Extreme Sports').count %></td>
     </tr>
         <tr>
         <td><%= link_to 'Music', controller: 'groups', action: 'music' %></td>
-        <td>0</td>
+        <td> <%= Group.where(category: 'Music').count %> </td>
     </tr>
         <tr>
-        <td><%= link_to 'Online Gaming', controller: 'groups', action: 'online' %></td>
-        <td>0</td>
+        <td><%= link_to 'Online Gaming', controller: 'groups', action: 'gaming' %></td>
+        <td><%= Group.where(category: 'Online Gaming').count %></td>
     </tr>
         <tr>
         <td><%= link_to 'Academics', controller: 'groups', action: 'academic' %></td>
-        <td>0</td>
+        <td><%= Group.where(category: 'Academics').count %></td>
     </tr>
         <td><%= link_to 'All', controller: 'groups' %></td>
         <td> <%= Group.distinct.count('id') %>

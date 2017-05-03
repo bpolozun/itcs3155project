@@ -12,13 +12,12 @@ class GroupsController < ApplicationController
     def academic
          @groups = Group.all 
     end
-    def online
-         @groups = Group.all 
-    end
     def new
         @group = Group.new
     end
-    
+    def gaming
+        @groups = Group.all
+    end
     def create
         @group = Group.new(group_parameters)
         
@@ -31,6 +30,7 @@ class GroupsController < ApplicationController
     
     def show
         @group = Group.find(params[:id])
+        
     end
     
     def index
