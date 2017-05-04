@@ -1,26 +1,21 @@
-<p>
+<h1>
     <strong>Group Name:</strong>
     <%= @group.groupName %>
-</p>
+</h1>
 
-<p>
-    <strong>Description:</strong>
-    <%= @group.description %>
-</p>
 
-<p>
+<h2>
     <strong>Number Needed:</strong>
     <%= @group.numberNeeded %>
-</p>
+</h2>
 
-<p>
+<h2>
     <strong>Number Total:</strong>
     <%= @group.numberTotal %>
-</p>
+</h2>
 
 <p>
-    <strong>Category:</strong>
-    <%= @group.category %>
+    <%= @group.description %>
 </p>
 
 <h4>
@@ -28,6 +23,6 @@
     </h4>
     <%= render 'applicants/form' %>
 
-<h4>Applicants</h4>
+<h4>Applicants: </h4>
     <%=render @group.applicants %>
 <%= link_to 'Main Page',  controller: 'main', action: 'index' %>
