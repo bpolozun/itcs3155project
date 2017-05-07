@@ -30,9 +30,23 @@ Scenario: As a poster I want to be able to create a post
   Then I should fill in "Description" field
   Then I should click on the "Create Group" button
   
-Scenario: As a poster I want to be able to edit a post
+Scenario: As a poster I want to be able to return to the main page
   Given I am on the home page
-  When I click on the "All" link
-  Then I should be on the "Listing Groups: All" page
-  Then I should click on the "Update" button
-  Then I should click on the "Update Group" button
+  When I click on the "Music" link
+  Then I should be on the "Listing Groups: Music" page
+  When I click on the "Index" link
+  
+
+  
+Scenario: As a browser I want to be able to move from page to page
+  Given I am on the home page
+  When I click on the "Music" link
+  Then I should be on the "Listing Groups: Music" page
+  When I click on the "Academics" link
+  Then I should be on the "Listing Groups: Academics" page
+  When I click on the "Sports" link
+  Then I should be on the "Listing Groups: Sports" page
+  When I click on the "Extreme Sports" link
+  Then I should be on the "Listing Groups: Extreme Sports" page
+  When I click on the "Online Gaming" link
+  Then I should be on the "Listing Groups: Online Gaming" page

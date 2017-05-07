@@ -25,3 +25,8 @@ end
 Then(/^I should select the "([^"]*)" field$/) do |field_name|
   select('Sports', from: 'Category')
 end
+
+Then(/^I should see the "([^"]*)" link$/) do |field_name|
+  select('Sports', from: 'Category')
+end
+

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get "/academic", to: "groups#academic", as: "academic"
   get "/gaming", to: "groups#gaming", as: "gaming"
   get "/music", to: "groups#music", as: "music"
+  get "/about", to: "main#about", as: "about"
   root 'main#index'
 end
